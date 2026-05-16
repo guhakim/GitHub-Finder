@@ -7,49 +7,64 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>GitHub Finder</h1>
 
-    <!-- 검색창 -->
-    <div class="search-box">
-      <input type="text" id="search-input" placeholder="GitHub 사용자명을 입력하세요" />
-      <button id="search-btn">검색</button>
-    </div>
+  <!-- 상단 헤더 -->
+  <header>
+    <h1>GitHub Finder</h1>
+  </header>
+
+  <main>
+    <!-- 제목 + 검색창 -->
+    <section class="search-section">
+      <h2>Search GitHub Users</h2>
+      <p class="subtitle">Enter a username to fetch a user profile and repos</p>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button id="search-btn">&#128269;</button>
+      </div>
+    </section>
 
     <!-- 상태 메시지 -->
     <div id="status-message" class="status-message hidden"></div>
 
-    <!-- 사용자 프로필 카드 -->
-    <div id="profile-card" class="profile-card hidden">
-      <img id="avatar" src="" alt="프로필 이미지" />
-      <div class="profile-info">
-        <h2 id="name"></h2>
-        <p id="username"></p>
-        <p id="bio"></p>
-        <a id="profile-link" href="" target="_blank">GitHub 프로필 보기</a>
-        <div class="stats">
-          <div class="stat">
-            <span id="followers"></span>
-            <label>팔로워</label>
-          </div>
-          <div class="stat">
-            <span id="following"></span>
-            <label>팔로잉</label>
-          </div>
-          <div class="stat">
-            <span id="public-repos"></span>
-            <label>저장소</label>
-          </div>
-        </div>
+    <!-- 프로필 카드 -->
+    <section id="profile-card" class="profile-card hidden">
+
+      <!-- 왼쪽: 이미지 + 버튼 -->
+      <div class="profile-left">
+        <img id="avatar" src="" alt="프로필 이미지" />
+        <a id="profile-link" href="" target="_blank" class="view-btn">View Profile</a>
       </div>
-    </div>
+
+      <!-- 오른쪽: 배지 + 정보 -->
+      <div class="profile-right">
+        <div class="badges">
+          <span class="badge blue">Public Repos: <strong id="public-repos"></strong></span>
+          <span class="badge gray">Public Gists: <strong id="public-gists"></strong></span>
+          <span class="badge green">Followers: <strong id="followers"></strong></span>
+          <span class="badge green">Following: <strong id="following"></strong></span>
+        </div>
+
+        <ul class="info-list">
+          <li><span class="label">Company:</span> <span id="company"></span></li>
+          <li><span class="label">Website/Blog:</span> <span id="blog"></span></li>
+          <li><span class="label">Location:</span> <span id="location"></span></li>
+          <li><span class="label">Member Since:</span> <span id="created-at"></span></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- 저장소 목록 -->
-    <div id="repos-section" class="repos-section hidden">
-      <h3>최신 저장소</h3>
+    <section id="repos-section" class="repos-section hidden">
+      <h3>Latest Repos</h3>
       <ul id="repos-list"></ul>
-    </div>
-  </div>
+    </section>
+  </main>
+
+  <!-- 하단 푸터 -->
+  <footer>
+    <p>GitHub Finder &#169;</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
