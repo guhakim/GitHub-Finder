@@ -3,6 +3,8 @@
 > **"AI가 코드를 만들어도, 최종 판단은 개발자가 한다."**  
 > AI와 협업하되, 코드의 흐름을 직접 이해하고 검증하는 것이 핵심입니다.
 
+**🔗 라이브 데모:** [https://guhakim.github.io/GitHub-Finder](https://guhakim.github.io/GitHub-Finder)
+
 ---
 
 ## 프로젝트 기획
