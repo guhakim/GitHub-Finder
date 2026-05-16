@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Finder</h1>
+
+    <!-- 검색창 -->
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="GitHub 사용자명을 입력하세요" />
+      <button id="search-btn">검색</button>
+    </div>
+
+    <!-- 상태 메시지 -->
+    <div id="status-message" class="status-message hidden"></div>
+
+    <!-- 사용자 프로필 카드 -->
+    <div id="profile-card" class="profile-card hidden">
+      <img id="avatar" src="" alt="프로필 이미지" />
+      <div class="profile-info">
+        <h2 id="name"></h2>
+        <p id="username"></p>
+        <p id="bio"></p>
+        <a id="profile-link" href="" target="_blank">GitHub 프로필 보기</a>
+        <div class="stats">
+          <div class="stat">
+            <span id="followers"></span>
+            <label>팔로워</label>
+          </div>
+          <div class="stat">
+            <span id="following"></span>
+            <label>팔로잉</label>
+          </div>
+          <div class="stat">
+            <span id="public-repos"></span>
+            <label>저장소</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 저장소 목록 -->
+    <div id="repos-section" class="repos-section hidden">
+      <h3>최신 저장소</h3>
+      <ul id="repos-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
